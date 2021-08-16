@@ -5,7 +5,7 @@ import chapter4.TabularOutput;
 import java.util.Scanner;
 
 public class MenuFunctions {
-    public static void main(String[] args) {
+    public static void main(String... args) {
         String prompt = """
                   Select a key
                 1 -> Phone book
@@ -29,7 +29,6 @@ public class MenuFunctions {
             case 1:
                 System.out.println("Phone book");
                 String book = """
-                          Select a key
                         1 -> Search
                         2 -> Service Nos
                         3 -> Add name
@@ -45,30 +44,22 @@ public class MenuFunctions {
                 int phoneBook = nokia3310.nextInt();
                 switch (phoneBook) {
                     case 1:
-                        System.out.println("Search");
-                        break;
+                        System.out.println("Search"); break;
                     case 2:
-                        System.out.println("Service Nos");
-                        break;
+                        System.out.println("Service Nos"); break;
                     case 3:
-                        System.out.println("Add name");
-                        break;
+                        System.out.println("Add name"); break;
                     case 4:
-                        System.out.println("Erase");
-                        break;
+                        System.out.println("Erase"); break;
                     case 5:
-                        System.out.println("Edit");
-                        break;
+                        System.out.println("Edit"); break;
                     case 6:
-                        System.out.println("Assign tone");
-                        break;
+                        System.out.println("Assign tone"); break;
                     case 7:
-                        System.out.println("Send b'card");
-                        break;
+                        System.out.println("Send b'card"); break;
                     case 8:
                         System.out.println("Options");
                         String option = """
-                                  Select a key
                                 1 -> Type of view
                                 2 -> Memory status
                                 """;
@@ -76,25 +67,18 @@ public class MenuFunctions {
                         int options = nokia3310.nextInt();
                         switch (options) {
                             case 1:
-                                System.out.println("Type of view");
-                                break;
+                                System.out.println("Type of view"); break;
                             case 2:
-                                System.out.println("Memory status");
-                                break;
-                        }
-                        break;
+                                System.out.println("Memory status"); break;
+                        } break;
                     case 9:
-                        System.out.println("Speed dials");
-                        break;
+                        System.out.println("Speed dials"); break;
                     case 10:
-                        System.out.println("Voice tags");
-                        break;
-                }
-                break;
+                        System.out.println("Voice tags"); break;
+                }break;
             case 2:
                 System.out.println("Messages");
                 String message = """
-                          Select a key
                         1 -> Write messages
                         2 -> Inbox
                         3 -> Outbox
@@ -110,27 +94,20 @@ public class MenuFunctions {
                 int messages = nokia3310.nextInt();
                 switch (messages) {
                     case 1:
-                        System.out.println("Write messages");
-                        break;
+                        System.out.println("Write messages"); break;
                     case 2:
-                        System.out.println("Inbox");
-                        break;
+                        System.out.println("Inbox"); break;
                     case 3:
-                        System.out.println("Outbox");
-                        break;
+                        System.out.println("Outbox"); break;
                     case 4:
-                        System.out.println("Picture messages");
-                        break;
+                        System.out.println("Picture messages"); break;
                     case 5:
-                        System.out.println("Templates");
-                        break;
+                        System.out.println("Templates"); break;
                     case 6:
-                        System.out.println("Smileys");
-                        break;
+                        System.out.println("Smileys"); break;
                     case 7:
                         System.out.println("Message settings");
                         String men = """
-                                Select a key
                                 1 -> Set
                                 2 -> Common
                                 """;
@@ -140,7 +117,6 @@ public class MenuFunctions {
                             case 1:
                                 System.out.println("Set");
                                 String mmm = """
-                                         Select a key
                                         1 -> Message centre number 
                                         2 -> Message sent as
                                         3 -> Message validity
@@ -158,7 +134,6 @@ public class MenuFunctions {
                             case 2:
                                 System.out.println("Common");
                                 String mmm2 = """
-                                          Select a key
                                         1 -> Delivery reports
                                         2 -> Reply via same centre
                                         3 -> Character support
@@ -186,7 +161,6 @@ public class MenuFunctions {
             case 4:
                 System.out.println("Call register");
                 String register = """
-                        Select a key
                         1 -> Missed calls
                         2 -> Received calls
                         3 -> Dialled numbers
@@ -210,7 +184,6 @@ public class MenuFunctions {
                     case 5:
                         System.out.println("Show call durations");
                         String dura = """ 
-                                Select a key
                                 1 -> Last call duration
                                 2 -> All calls' duration
                                 3 -> Received calls' duration 
@@ -234,7 +207,6 @@ public class MenuFunctions {
                     case 6:
                         System.out.println("Show call costs");
                         String show = """
-                                Select a key
                                 1 -> Last call cost
                                 2 -> All calls' cost
                                 3 -> Clear counters
@@ -270,7 +242,6 @@ public class MenuFunctions {
             case 5:
                 System.out.println("Tones");
                 String tone  = """
-                        Select a key
                         1 -> Ringing tone
                         2 -> Ringing volume 
                         3 -> Incoming call alert 
@@ -305,7 +276,137 @@ public class MenuFunctions {
                 } break;
             case 6:
                 System.out.println("Settings");
+                String set = """
+                        1 -> Call settings
+                        2 -> Phone settings
+                        3 -> Security settings 
+                        4 -> Restore factory settings 
+                        """;
+                System.out.println(set);
+                int settings = nokia3310.nextInt();
+                switch (settings) {
+                    case  1:
+                        System.out.println("Call settings");
+                        String set1 = """
+                                1 -> Automatic  redial 
+                                2 -> Speed dialling 
+                                3-> Call waiting options 
+                                4 -> Own number sending 
+                                5 -> Phone line in use 
+                                6 -> Automatic answer
+                                """;
+                        System.out.println(set1);
+                        int callSettings = nokia3310.nextInt();
+                        switch (callSettings) {
+                            case 1:
+                                System.out.println("Automatic redial"); break;
+                            case 2:
+                                System.out.println("Speed dialling"); break;
+                            case 3:
+                                System.out.println("Call waiting options"); break;
+                            case 4:
+                                System.out.println("Own number sending"); break;
+                            case 5:
+                                System.out.println("Phone line in use"); break;
+                            case 6:
+                                System.out.println("Automatic answer"); break;
+                        }break;
+                    case 2:
+                        System.out.println("Phone settings");
+                        String set2 = """
+                               1 -> Language
+                               2 -> Cell info display 
+                               3 -> Welcome note
+                               4 -> Network selection
+                               5 -> Lights 
+                               6 -> Confirm SIM service actions
+                                """;
+                        System.out.println(set2);
+                        int phoneSettings = nokia3310.nextInt();
+                        switch (phoneSettings){
+                            case 1:
+                                System.out.println("Language"); break;
+                            case 2:
+                                System.out.println("Call info display"); break;
+                            case 3:
+                                System.out.println("Welcome note"); break;
+                            case 4:
+                                System.out.println("Network selection"); break;
+                            case 5:
+                                System.out.println("Lights"); break;
+                            case 6:
+                                System.out.println("Confirm SIM service actions"); break;
+                        }break;
+                    case 3:
+                        System.out.println("Security settings");
+                        String set3 = """
+                                1 -> PIN code request
+                                2 -> Call barring service
+                                3 -> Fixed dialling 
+                                4 -> Closed user group
+                                5 -> Phone security
+                                6 -> Change access codes
+                                """;
+                        System.out.println(set3);
+                        int securitySettings = nokia3310.nextInt();
+                        switch (securitySettings) {
+                            case 1:
+                                System.out.println("PIN code request");break;
+                            case 2:
+                                System.out.println("Call barring service"); break;
+                            case 3:
+                                System.out.println("Fixed dialling"); break;
+                            case 4:
+                                System.out.println("Closed user group"); break;
+                            case 5:
+                                System.out.println("Phone security"); break;
+                            case 6:
+                                System.out.println("Change access codes"); break;
+                        }break;
+                    case 4:
+                        System.out.println("Restore factory settings ");break;
+                }break;
+            case 7:
+                System.out.println("Call divert"); break;
+            case 8:
+                System.out.println("Games"); break;
+            case 9:
+                System.out.println("Calculator"); break;
+            case 10:
+                System.out.println("Reminders"); break;
+            case 11:
+                System.out.println("clock");
+                String clock = """
+                        1 -> Alarm clock
+                        2 -> Clock settings 
+                        3 -> Data setting
+                        4 -> Stopwatch
+                        5 -> Countdown timer
+                        6 -> Auto update of date and time 
+                        """;
+                System.out.println(clock);
+                int clockSettings = nokia3310.nextInt();
+                switch (clockSettings) {
+                    case 1:
+                        System.out.println("Alarm clock"); break;
+                    case 2:
+                        System.out.println("Clock settings"); break;
+                    case 3:
+                        System.out.println("Data setting"); break;
+                    case 4:
+                        System.out.println("Stopwatch"); break;
+                    case 5:
+                        System.out.println("Countdown timer"); break;
+                    case 6:
+                        System.out.println("Auto update of date and time"); break;
+                }break;
+            case 12:
+                System.out.println("Profiles"); break;
+            case 13:
+                System.out.println("SIM services");break;
+            default:
+                System.out.println("Error");
+                main();
         }
     }
 }
-
